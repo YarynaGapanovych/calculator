@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/bootstrap-grid.css">
+  <link rel="stylesheet" href="css/style.css">
+  <title>Document</title>
+</head>
+
+<body>
+  <div class="container">
+    <div class="row calculator">
+      <div class="col-md-6 col-12 sum">
+        <input class="sum-number" type="number" name="" id="output" />
+        <input class="sum-range" type="range" name="" id="range" min="0" max="100000" step="10" />
+      </div>
+
+      <div class="col-md-6 col-12 duration">
+        <input class="result" type="number" disabled="disabled" id="result"></input>
+        <input class="duration-range" name="DurationRange" type="range" id="duration" value="1" min="0" max="120"
+          step="1" list="number" />
+
+        <div class="month">
+          <img class="mark-img" src="/icons/up-arrow.svg" alt="">
+          <span class="rotate rotate-month">месяц</span>
+        </div>
+        <div class="half-year">
+          <img class="mark-img" src="/icons/up-arrow.svg" alt="">
+          <span class="rotate rotate-half-year">полгода</span>
+        </div>
+        <div class="year">
+          <img class="mark-img" src="/icons/up-arrow.svg" alt="">
+          <span class="rotate rotate-year">год</span>
+        </div>
+        <div class="ten-years">
+          <img class="mark-img" src="/icons/up-arrow.svg" alt="">
+          <span class="rotate rotate-ten-years">10 лет</span>
+        </div>
+
+        <!-- <div class="month-value" id="slider_value">1 месяц</div> -->
+
+      </div>
+    </div>
+  </div>
+
+
+  <script src="js/jquery.min.js"></script>
+  <script src="js/script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,180 @@
+.calculator {
+  margin-top: 100px;
+  padding: 50px 20px 75px;
+  background: #f8f8f8;
+  border-left: 1px solid#cb36fd;
+  min-height: 160px;
+}
+
+.sum {
+  flex-direction: column;
+  position: relative;
+}
+
+.sum::before, .duration::before {
+  content: '$';
+  position: absolute;
+  z-index: 90;
+  top: 8px;
+  left: 32px;
+  font-size: 30px;
+  color: gray;
+}
+
+.duration::after {
+  content: '4%';
+  position: absolute;
+  z-index: 90;
+  top: 10px;
+  right: 32px;
+  font-size: 28px;
+  color: gray;
+}
+
+.sum-number, .sum-range, .result, .duration-range  {
+  width: 100%;
+}
+
+.sum-number, .result {
+  height: 50px;
+  border: 2px solid rgb(172, 170, 170);
+  border-radius: 14px;
+  background: rgb(253, 252, 243);
+  padding-left: 45px;
+  color: #000000;
+  font-size: 20px;
+  position: relative;
+}
+
+.sum-number::before {
+  content: '';
+  position: absolute;
+  z-index: 90;
+  color: #000000;
+  opacity: .9;
+  width: 10px;
+  height: 10px;
+  top: 0;
+  left: 0;
+}
+
+.sum-range, .duration-range {
+  -webkit-appearance: none;
+    width: 86%;
+    height: 2px;
+    border-radius: 5px;
+    background:#cb36fd;
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+    position: absolute;
+    
+}
+
+.sum-range {
+  width: 86%;
+  left: 25px;
+  top: 45.5px;
+}
+
+.sum-range:hover, .duration-range:hover {
+  opacity: 1;
+}
+
+.sum-range::-webkit-slider-thumb,
+.duration-range::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 23px;
+  height: 24px;
+  border: 0;
+  background: url('../icons/curcle.svg');
+  cursor: pointer;
+}
+
+.sum-range::-moz-range-thumb,
+.duration-range::-moz-range-thumb {
+  width: 23px;
+  height: 24px;
+  border: 0;
+  background: url('../icons/curcle.svg');
+  cursor: pointer;
+}
+
+.duration {
+  flex-direction: column;
+}
+
+.duration-range {
+  position: relative;
+  width: 250px;
+  left: 5px;
+  bottom: 13px;
+}
+
+.mark-img {
+  width: 10px;
+  padding-bottom: 10px;
+}
+
+.month, .half-year, .year, .ten-years {
+  position: absolute;
+  top: 55px;
+  display: flex;
+  flex-direction: column;
+}
+
+.rotate {
+  transform: rotate(60deg);
+  position: absolute;
+}
+
+.rotate-month {
+  top: 28px;
+  left: -7px;
+}
+
+.rotate-half-year {
+  top: 32px;
+  left: -7px;
+}
+
+.rotate-year {
+  top: 20px;
+  left: 5px;
+}
+
+.rotate-ten-years {
+  top: 10px;
+  left: 0px;
+}
+
+.month {
+  left: 30px;
+}
+
+.half-year {
+  left: 40px;
+}
+
+.year {
+  left: 51px;
+}
+
+.ten-years {
+  left: 255px
+}
+
+.month-value {
+  margin-top: 70px;
+  margin-left: 15px;
+  color: rgb(56, 55, 55);
+  font-size: 18px;
+}
+
+@media screen and (max-width: 767px) {
+  .sum {
+    margin-bottom: 30px;
+  }
+}
