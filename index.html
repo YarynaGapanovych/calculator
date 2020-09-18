@@ -20,35 +20,24 @@
 
       <div class="col-md-6 col-12 duration">
         <input class="result" type="number" disabled="disabled" id="result"></input>
-        <input class="duration-range" name="DurationRange" type="range" id="duration" value="1" min="0" max="120"
-          step="1" list="number" />
-
-        <div class="month">
-          <img class="mark-img" src="./icons/up-arrow.svg" alt="">
-          <span class="rotate rotate-month">месяц</span>
-        </div>
-        <div class="half-year">
-          <img class="mark-img" src="./icons/up-arrow.svg" alt="">
-          <span class="rotate rotate-half-year">полгода</span>
-        </div>
-        <div class="year">
-          <img class="mark-img" src="./icons/up-arrow.svg" alt="">
-          <span class="rotate rotate-year">год</span>
-        </div>
-        <div class="ten-years">
-          <img class="mark-img" src="./icons/up-arrow.svg" alt="">
-          <span class="rotate rotate-ten-years">10 лет</span>
-        </div>
-
-        <!-- <div class="month-value" id="slider_value">1 месяц</div> -->
-
+        <input class="duration-range" name="DurationRange" type="range" id="duration" value="1" min="1" max="4" step="1"
+          list="number" />
+        <ul class="curcles">
+          <li class="curcles-item"></li>
+          <li class="curcles-item"></li>
+          <li class="curcles-item"></li>
+          <li class="curcles-item"></li>
+        </ul>
+        <ul class="duration-labels">
+          <li id='month' class="duration-item active selected">месяц</li>
+          <li id='half-year' class="duration-item">полгода</li>
+          <li id='year' class="duration-item">год</li>
+          <li id='ten-years' class="duration-item">10 лет</li>
+        </ul>
       </div>
-    </div>
-  </div>
 
-
-  <script src="js/jquery.min.js"></script>
-  <script src="js/script.js"></script>
+      <script src="js/jquery.min.js"></script>
+      <script src="js/script.js"></script>
 </body>
 
 </html>

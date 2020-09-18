@@ -1,6 +1,6 @@
 .calculator {
   margin-top: 100px;
-  padding: 50px 20px 75px;
+  padding: 50px 20px;
   background: #f8f8f8;
   border-left: 1px solid#cb36fd;
   min-height: 160px;
@@ -46,16 +46,14 @@
   position: relative;
 }
 
-.sum-number::before {
-  content: '';
-  position: absolute;
-  z-index: 90;
-  color: #000000;
-  opacity: .9;
-  width: 10px;
-  height: 10px;
-  top: 0;
-  left: 0;
+.sum-number:focus {
+  outline: none;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0; 
 }
 
 .sum-range, .duration-range {
@@ -65,18 +63,14 @@
     border-radius: 5px;
     background:#cb36fd;
     outline: none;
-    opacity: 0.7;
     -webkit-transition: .2s;
     transition: opacity .2s;
     position: absolute;
-    
+    width: 80%;
+    left: 9%;
+    top: 45.5px;
 }
 
-.sum-range {
-  width: 86%;
-  left: 25px;
-  top: 45.5px;
-}
 
 .sum-range:hover, .duration-range:hover {
   opacity: 1;
@@ -89,7 +83,7 @@
   width: 23px;
   height: 24px;
   border: 0;
-  background: url('../icons/curcle.svg');
+  background: url('../icons/curcle.svg') no-repeat center;
   cursor: pointer;
 }
 
@@ -98,7 +92,7 @@
   width: 23px;
   height: 24px;
   border: 0;
-  background: url('../icons/curcle.svg');
+  background: url('../icons/curcle.svg') no-repeat center;
   cursor: pointer;
 }
 
@@ -106,71 +100,58 @@
   flex-direction: column;
 }
 
-.duration-range {
-  position: relative;
-  width: 250px;
-  left: 5px;
-  bottom: 13px;
-}
-
-.mark-img {
-  width: 10px;
-  padding-bottom: 10px;
-}
-
-.month, .half-year, .year, .ten-years {
-  position: absolute;
-  top: 55px;
+.duration-labels {
   display: flex;
-  flex-direction: column;
+  justify-content: space-around;
+  margin-top: 13px;
 }
 
-.rotate {
-  transform: rotate(60deg);
+.duration-item {
+  transition: 0.3s;
+  position: relative;
+}
+
+.active {
+  color: #c626fc;
+}
+
+.curcles {
   position: absolute;
+  top: -15px;
+  right: 0;
+  left: 0;
+  display: flex;
+  justify-content: space-between;
+  top: 44px;
+  margin-left: -3px;
+  margin-right: 3px;
 }
 
-.rotate-month {
-  top: 28px;
-  left: -7px;
+@media screen and (min-width: 767px) and (max-width: 992px) {
+  .curcles {
+    margin-left: 0px;
+  }
 }
 
-.rotate-half-year {
-  top: 32px;
-  left: -7px;
+@media screen and (min-width: 430px) and (max-width: 767px) {
+  .curcles {
+    margin-left: -3px;
+  }
 }
 
-.rotate-year {
-  top: 20px;
-  left: 5px;
+@media screen and (max-width: 430px) {
+  .curcles {
+    margin-left: 1px;
+  }
 }
 
-.rotate-ten-years {
-  top: 10px;
-  left: 0px;
-}
-
-.month {
-  left: 30px;
-}
-
-.half-year {
-  left: 40px;
-}
-
-.year {
-  left: 51px;
-}
-
-.ten-years {
-  left: 255px
-}
-
-.month-value {
-  margin-top: 70px;
-  margin-left: 15px;
-  color: rgb(56, 55, 55);
-  font-size: 18px;
+.curcles-item {
+  margin: 0 auto;
+  width: 10px;
+  height: 10px;
+  background: #cb36fd;
+  opacity: 0.8;
+  border-radius: 50%;
 }
 
 @media screen and (max-width: 767px) {
